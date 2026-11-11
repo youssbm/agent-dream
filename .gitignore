@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+.dream/
+*.log
+.env*
+PLAN.md
