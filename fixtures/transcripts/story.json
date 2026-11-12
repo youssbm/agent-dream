@@ -1,0 +1,18 @@
+{
+  "cwd": "/home/dev/projects/demo-app",
+  "otherCwd": "/home/dev/projects/other-app",
+  "ask": "Set up the dev server for demo-app and tell me which port it uses.",
+  "check": "Let me check the project config.",
+  "packageJson": "{\n  \"name\": \"demo-app\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"test\": \"vitest run\",\n    \"preview\": \"vite preview\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\"\n  },\n  \"devDependencies\": {\n    \"vite\": \"^5.2.0\",\n    \"vitest\": \"^1.6.0\",\n    \"@vitejs/plugin-react\": \"^4.3.0\",\n    \"typescript\": \"^5.4.5\",\n    \"eslint\": \"^8.57.0\"\n  }\n}",
+  "wrongClaim": "The dev server runs on port 3000. I'll note that for later.",
+  "runIt": "Run it, please.",
+  "devOutput": "> demo-app@0.1.0 dev\n> vite\n\n  VITE v5.2.0  ready in 312 ms\n\n  ➜  Local:   http://localhost:5173/\nlistening on :5173",
+  "wrongAgain": "The dev server is up on port 3000.",
+  "correction": "no, it's 5173 — vite defaults to 5173, not 3000. Remember that.",
+  "ack": "You're right — the dev server listens on port 5173 (Vite's default). I'll use 5173 from now on.",
+  "runTests": "Now run the tests.",
+  "testOutput": "FAIL src/app.test.ts > renders header\nAssertionError: expected \"Demo\" to be \"Demo App\"\nTests: 1 failed, 4 passed, 5 total\nexit code 1",
+  "decision": "One test fails: `renders header`. Let's go with fixing the header markup first.",
+  "pnpm": "Also, always use pnpm instead of npm in this repo.",
+  "pnpmAck": "Understood — pnpm from now on."
+}

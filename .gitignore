@@ -5,3 +5,5 @@ coverage/
 *.log
 .env*
 PLAN.md
+packages/server/LICENSE
+packages/server/README.md
