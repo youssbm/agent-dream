@@ -1,6 +1,6 @@
 {
   "name": "agent-dream-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Memory dreaming for any coding agent, as an MCP server: verify, reorganize and promote agent memory using the thread's own model. No LLM calls, no network.",
   "license": "MIT",
   "type": "module",
