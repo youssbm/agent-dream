@@ -1,5 +1,6 @@
 import { execFile } from 'node:child_process';
 import { mkdir, mkdtemp, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
+import { realpathSync } from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
@@ -59,7 +60,8 @@ describe.skipIf(!hasGit)('git history', () => {
     await h.init(); // idempotent
     expect(await exists(path.join(dreamDir, '.git'))).toBe(true);
     const top = (await git(dreamDir, ['rev-parse', '--show-toplevel'])).trim();
-    expect(path.resolve(top).toLowerCase()).toBe(path.resolve(dreamDir).toLowerCase());
+    // Compare real paths: on some Windows hosts TEMP is an 8.3 short path (RUNNER~1) while git reports the long one.
+    expect(realpathSync.native(path.resolve(top)).toLowerCase()).toBe(realpathSync.native(dreamDir).toLowerCase());
     const localName = (await git(dreamDir, ['config', '--local', 'user.name'])).trim();
     expect(localName).toBe('agent-dream');
 
