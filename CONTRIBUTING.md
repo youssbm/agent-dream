@@ -7,7 +7,7 @@ Thanks for helping. Bug reports, host setup notes, transcript adapters and fixes
 You need Node.js 22.13 or newer (CI runs 22.x and 24.x on Linux and Windows) and `git`.
 
 ```sh
-git clone https://github.com/youssefbm2008/agent-dream.git
+git clone https://github.com/youssbm/agent-dream.git
 cd agent-dream
 npm install
 npm run check

@@ -185,7 +185,7 @@ Token counts are estimates (characters ÷ 4). Each dream token is billed at your
 ## Development
 
 ```sh
-git clone https://github.com/youssefbm2008/agent-dream.git
+git clone https://github.com/youssbm/agent-dream.git
 cd agent-dream
 npm install
 npm run check      # typecheck, tests, bundle, no-network dependency check

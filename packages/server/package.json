@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/youssefbm2008/agent-dream.git",
+    "url": "git+https://github.com/youssbm/agent-dream.git",
     "directory": "packages/server"
   },
-  "homepage": "https://github.com/youssefbm2008/agent-dream#readme",
+  "homepage": "https://github.com/youssbm/agent-dream#readme",
   "bugs": {
-    "url": "https://github.com/youssefbm2008/agent-dream/issues"
+    "url": "https://github.com/youssbm/agent-dream/issues"
   },
   "keywords": ["mcp", "model-context-protocol", "mcp-server", "agent", "memory", "dreaming", "opencode", "codex", "claude-code", "copilot"],
   "devDependencies": {
