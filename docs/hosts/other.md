@@ -6,8 +6,8 @@ can use it. Nothing else is required: prompts, resources and server instructions
 ## The command
 
 ```sh
-npx -y agent-dream                          # project = the directory the host starts it in
-npx -y agent-dream --project /path/to/repo  # explicit project
+npx -y agent-dream-mcp                          # project = the directory the host starts it in
+npx -y agent-dream-mcp --project /path/to/repo  # explicit project
 ```
 
 | Option | Meaning |
@@ -22,15 +22,15 @@ writes logs to stderr, never opens a network connection, and never calls a model
 Most hosts accept a JSON entry shaped like one of these:
 
 ```json
-{ "mcpServers": { "agent-dream": { "command": "npx", "args": ["-y", "agent-dream"] } } }
+{ "mcpServers": { "agent-dream": { "command": "npx", "args": ["-y", "agent-dream-mcp"] } } }
 ```
 
 ```json
-{ "servers": { "agent-dream": { "type": "stdio", "command": "npx", "args": ["-y", "agent-dream"] } } }
+{ "servers": { "agent-dream": { "type": "stdio", "command": "npx", "args": ["-y", "agent-dream-mcp"] } } }
 ```
 
 Check your host's documentation for the exact file and key names. On native Windows, if the host cannot start `npx`
-directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "agent-dream"]`.
+directly, use `"command": "cmd"` with `"args": ["/c", "npx", "-y", "agent-dream-mcp"]`.
 
 ## What your host needs to support
 

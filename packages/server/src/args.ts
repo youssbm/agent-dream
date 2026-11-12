@@ -21,7 +21,7 @@ Options:
   --version, -v        Print the version and exit
   --help, -h           Print this help and exit
 
-Configure it in your agent as a local (stdio) MCP server, e.g. command "npx", args ["-y", "agent-dream"].
+Configure it in your agent as a local (stdio) MCP server, e.g. command "npx", args ["-y", "agent-dream-mcp"].
 `;
 
 /**

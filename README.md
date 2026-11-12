@@ -47,17 +47,18 @@ Details: [docs/how-it-works.md](docs/how-it-works.md).
 ## Install
 
 Requires **Node.js 22.13+**. `git` on your PATH is recommended (memory history; without it, snapshot copies are used).
-The server is started by your host with:
+The npm package is [`agent-dream-mcp`](https://www.npmjs.com/package/agent-dream-mcp) (one self-contained file, no
+dependencies). The server is started by your host with:
 
 ```sh
-npx -y agent-dream   # optional: --project <dir>  (default: $AGENT_DREAM_PROJECT, else $CLAUDE_PROJECT_DIR, else the start directory)
+npx -y agent-dream-mcp   # optional: --project <dir>  (default: $AGENT_DREAM_PROJECT, else $CLAUDE_PROJECT_DIR, else the start directory)
 ```
 
 | Host | Minimal setup | `/dream` | Transcripts read | Guide |
 |---|---|---|---|---|
-| opencode | `opencode mcp add agent-dream -- npx -y agent-dream` | `/agent-dream:dream` | yes | [opencode](docs/hosts/opencode.md) |
-| Claude Code | `claude mcp add --transport stdio --scope project agent-dream -- npx -y agent-dream` | `/agent-dream:dream` | yes | [Claude Code](docs/hosts/claude-code.md) |
-| Codex | `codex mcp add agent-dream -- npx -y agent-dream` | ask "run a dream" | yes | [Codex](docs/hosts/codex.md) |
+| opencode | `opencode mcp add agent-dream -- npx -y agent-dream-mcp` | `/agent-dream:dream` | yes | [opencode](docs/hosts/opencode.md) |
+| Claude Code | `claude mcp add --transport stdio --scope project agent-dream -- npx -y agent-dream-mcp` | `/agent-dream:dream` | yes | [Claude Code](docs/hosts/claude-code.md) |
+| Codex | `codex mcp add agent-dream -- npx -y agent-dream-mcp` | ask "run a dream" | yes | [Codex](docs/hosts/codex.md) |
 | VS Code / Copilot | `mcpServers` entry in `~/.copilot/mcp-config.json` | `/mcp.agent-dream.dream` (Local harness) or ask | not yet | [VS Code](docs/hosts/vscode-copilot.md) |
 | Anything else with MCP tools | see guide | ask "run a dream" | — | [Other hosts](docs/hosts/other.md) |
 
@@ -190,8 +191,8 @@ npm install
 npm run check      # typecheck, tests, bundle, no-network dependency check
 ```
 
-Layout: `packages/core` (store, transcript adapters, quality checks, dream engine), `packages/server` (MCP wiring and the
-`agent-dream` bin), `packages/bench` (evaluation), `fixtures/` (synthetic transcripts). See
+Layout: `packages/core` (store, transcript adapters, quality checks, dream engine), `packages/server` (MCP wiring; published
+as `agent-dream-mcp`), `packages/bench` (evaluation), `fixtures/` (synthetic transcripts). See
 [CONTRIBUTING.md](CONTRIBUTING.md), including how to add a transcript adapter for another host.
 
 ## License

@@ -72,7 +72,7 @@ model and version. Keep the corpora synthetic or scrubbed. Never publish real tr
 
 1. Install agent-dream in the host (see `docs/hosts/<host>.md`), pointing at a **scratch copy** of the test project.
 2. Delete `<project>/.dream/` between conditions unless a condition says otherwise.
-3. Record the host version, the model, the agent-dream version (`npx -y agent-dream --version`) and the date.
+3. Record the host version, the model, the agent-dream version (`npx -y agent-dream-mcp --version`) and the date.
 4. Tokens: use the host's own usage display if it has one. Also record the `budget.usedTokens` the server reports
    at `ready_to_commit`.
 

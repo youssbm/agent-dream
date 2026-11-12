@@ -13,7 +13,7 @@ docs say) turn MCP prompts into slash commands, so you start a dream by asking f
 With the CLI:
 
 ```sh
-codex mcp add agent-dream -- npx -y agent-dream
+codex mcp add agent-dream -- npx -y agent-dream-mcp
 ```
 
 Or add a table to `~/.codex/config.toml`:
@@ -21,7 +21,7 @@ Or add a table to `~/.codex/config.toml`:
 ```toml
 [mcp_servers.agent-dream]
 command = "npx"
-args = ["-y", "agent-dream"]
+args = ["-y", "agent-dream-mcp"]
 ```
 
 The Codex CLI, desktop app and IDE extension share this file. You can also put the same table in a project's
@@ -86,7 +86,7 @@ a custom `CODEX_HOME` may not be picked up.
 
 ## Windows
 
-If the server fails to start on native Windows, try `command = "cmd"` with `args = ["/c", "npx", "-y", "agent-dream"]`.
+If the server fails to start on native Windows, try `command = "cmd"` with `args = ["/c", "npx", "-y", "agent-dream-mcp"]`.
 *(Not verified for Codex; this is the usual workaround for `npx` launched without a shell.)*
 
 ## Verified vs not verified

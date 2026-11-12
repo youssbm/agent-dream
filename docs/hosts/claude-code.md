@@ -13,7 +13,7 @@ real command here.
 From your project directory:
 
 ```sh
-claude mcp add --transport stdio --scope project agent-dream -- npx -y agent-dream
+claude mcp add --transport stdio --scope project agent-dream -- npx -y agent-dream-mcp
 ```
 
 Everything after `--` is the server command. Scopes:
@@ -31,7 +31,7 @@ Or write `.mcp.json` yourself:
   "mcpServers": {
     "agent-dream": {
       "command": "npx",
-      "args": ["-y", "agent-dream"]
+      "args": ["-y", "agent-dream-mcp"]
     }
   }
 }
@@ -45,7 +45,7 @@ An entry without `type` is a stdio server.
 `memory_status` (below). If `dir` is wrong, pin it:
 
 ```sh
-claude mcp add --transport stdio --env AGENT_DREAM_PROJECT=/path/to/project agent-dream -- npx -y agent-dream
+claude mcp add --transport stdio --env AGENT_DREAM_PROJECT=/path/to/project agent-dream -- npx -y agent-dream-mcp
 ```
 
 (Keep at least one option, such as `--transport stdio`, between `--env` and the server name; otherwise the CLI reads the
@@ -61,7 +61,7 @@ Claude Code's docs have recommended wrapping `npx` with `cmd /c` on native Windo
   "mcpServers": {
     "agent-dream": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "agent-dream"]
+      "args": ["/c", "npx", "-y", "agent-dream-mcp"]
     }
   }
 }

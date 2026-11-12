@@ -1,14 +1,15 @@
 {
-  "name": "agent-dream",
+  "name": "agent-dream-mcp",
   "version": "0.1.0",
-  "description": "Memory dreaming for any coding agent, as an MCP server: verify, reorganize and promote agent memory using the thread's own model.",
+  "description": "Memory dreaming for any coding agent, as an MCP server: verify, reorganize and promote agent memory using the thread's own model. No LLM calls, no network.",
   "license": "MIT",
   "type": "module",
   "bin": {
+    "agent-dream-mcp": "dist/agent-dream.js",
     "agent-dream": "dist/agent-dream.js"
   },
   "files": [
-    "dist",
+    "dist/agent-dream.js",
     "README.md",
     "LICENSE"
   ],
@@ -17,10 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/youssefbm2008/agent-dream.git"
+    "url": "git+https://github.com/youssefbm2008/agent-dream.git",
+    "directory": "packages/server"
   },
-  "keywords": ["mcp", "model-context-protocol", "agent", "memory", "dreaming", "opencode", "codex", "claude-code"],
-  "dependencies": {
+  "homepage": "https://github.com/youssefbm2008/agent-dream#readme",
+  "bugs": {
+    "url": "https://github.com/youssefbm2008/agent-dream/issues"
+  },
+  "keywords": ["mcp", "model-context-protocol", "mcp-server", "agent", "memory", "dreaming", "opencode", "codex", "claude-code", "copilot"],
+  "devDependencies": {
     "@agent-dream/core": "0.1.0",
     "@modelcontextprotocol/sdk": "^1.32.2",
     "zod": "^4.6.7"

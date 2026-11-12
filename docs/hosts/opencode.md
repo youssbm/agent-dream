@@ -18,7 +18,7 @@ Add an entry under `mcp.servers` in your project's `opencode.json` (or `opencode
     "servers": {
       "agent-dream": {
         "type": "local",
-        "command": ["npx", "-y", "agent-dream"]
+        "command": ["npx", "-y", "agent-dream-mcp"]
       }
     }
   }
@@ -28,7 +28,7 @@ Add an entry under `mcp.servers` in your project's `opencode.json` (or `opencode
 Or use the CLI, which writes to the project configuration (add `--global` for every project):
 
 ```sh
-opencode mcp add agent-dream -- npx -y agent-dream
+opencode mcp add agent-dream -- npx -y agent-dream-mcp
 ```
 
 Notes:

@@ -25,7 +25,7 @@ User-wide, in `~/.copilot/mcp-config.json` (or `$COPILOT_HOME/mcp-config.json`):
     "agent-dream": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "agent-dream", "--project", "/path/to/project"],
+      "args": ["-y", "agent-dream-mcp", "--project", "/path/to/project"],
       "tools": ["*"]
     }
   }
@@ -46,7 +46,7 @@ when the experimental setting `chat.mcp.workspaceRootConfig.enabled` is on, and 
     "agent-dream": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "agent-dream"]
+      "args": ["-y", "agent-dream-mcp"]
     }
   }
 }
